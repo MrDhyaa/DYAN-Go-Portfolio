@@ -31,7 +31,7 @@ const professions = [
 ];
 
 export default function App() {
-  const { t, dir } = useI18n();
+  const { t } = useI18n();
 
   return (
     <div className="min-h-screen bg-[#0a0a0b] text-[#f5f5f7] overflow-x-hidden">
