@@ -1,64 +1,134 @@
-import { Suspense, lazy } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './sections/Footer';
-import ScrollToTop from './components/ScrollToTop';
+import { motion } from "framer-motion";
+import { ArrowDown, Github, Linkedin, Twitter, Dribbble } from "lucide-react";
+import { useI18n, Lang } from "./i18n";
 
-const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/About'));
-const CV = lazy(() => import('./pages/CV'));
-const BeyondWork = lazy(() => import('./pages/BeyondWork'));
-const Portfolio = lazy(() => import('./pages/Portfolio'));
-const ProjectDetail = lazy(() => import('./pages/ProjectDetail'));
-const Services = lazy(() => import('./pages/Services'));
-const Contact = lazy(() => import('./pages/Contact'));
-const FAQ = lazy(() => import('./pages/FAQ'));
-
-function PageFallback() {
+function LangSwitch() {
+  const { lang, setLang } = useI18n();
+  const langs: Lang[] = ["en", "fr", "ar"];
   return (
-    <div className="flex min-h-[60vh] items-center justify-center">
-      <div className="h-8 w-8 animate-spin rounded-full border-2 border-white/10 border-t-electric-400" />
+    <div className="flex items-center gap-1 text-xs font-medium tracking-wide">
+      {langs.map((l, i) => (
+        <span key={l} className="flex items-center">
+          <button
+            onClick={() => setLang(l)}
+            className={`uppercase transition-opacity ${
+              lang === l ? "opacity-100" : "opacity-40 hover:opacity-80"
+            }`}
+          >
+            {l}
+          </button>
+          {i < langs.length - 1 && <span className="mx-2 opacity-30">/</span>}
+        </span>
+      ))}
     </div>
   );
 }
 
-function NotFound() {
-  return (
-    <section className="section-pad flex min-h-[70vh] items-center justify-center pt-32">
-      <div className="text-center">
-        <p className="font-display text-7xl font-extrabold gradient-text-blue">404</p>
-        <h1 className="mt-4 font-display text-2xl font-bold">Page not found</h1>
-        <p className="mt-2 text-ink-200">The page you are looking for does not exist.</p>
-        <Link to="/" className="btn-primary mt-6">
-          Back home
-        </Link>
-      </div>
-    </section>
-  );
-}
+const professions = [
+  { key: "hero.profession1" },
+  { key: "hero.profession2" },
+  { key: "hero.profession3" },
+];
 
 export default function App() {
+  const { t, dir } = useI18n();
+
   return (
-    <div className="relative min-h-screen overflow-x-hidden">
-      <ScrollToTop />
-      <Navbar />
-      <main>
-        <Suspense fallback={<PageFallback />}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/cv" element={<CV />} />
-            <Route path="/beyond-work" element={<BeyondWork />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/portfolio/:slug" element={<ProjectDetail />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
-      </main>
-      <Footer />
+    <div className="min-h-screen bg-[#0a0a0b] text-[#f5f5f7] overflow-x-hidden">
+      {/* Nav */}
+      <nav className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-[#0a0a0b]/60 border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+          <div className="font-semibold tracking-tight text-lg">Y<span className="text-white/40">.</span></div>
+          <div className="hidden md:flex items-center gap-8 text-sm text-white/70">
+            <a href="#about" className="hover:text-white transition">{t("nav.about")}</a>
+            <a href="#work" className="hover:text-white transition">{t("nav.work")}</a>
+            <a href="#contact" className="hover:text-white transition">{t("nav.contact")}</a>
+          </div>
+          <LangSwitch />
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <header className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center">
+        {/* ambient glow */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] rounded-full bg-white/[0.03] blur-[120px]" />
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+          className="relative z-10"
+        >
+          <p className="text-xs uppercase tracking-[0.3em] text-white/40 mb-6">
+            Portfolio · 2026
+          </p>
+          <h1 className="text-5xl md:text-7xl font-semibold tracking-tight leading-[1.05] mb-6 max-w-3xl">
+            {t("hero.name")}
+          </h1>
+          <p className="text-base md:text-lg text-white/60 max-w-xl mx-auto leading-relaxed mb-10">
+            {t("hero.tagline")}
+          </p>
+
+          {/* Profession items — order preserved, only text translated */}
+          <div className="flex items-center justify-center gap-3 text-sm text-white/70 mb-12">
+            {professions.map((p, i) => (
+              <span key={p.key} className="flex items-center gap-3">
+                <span className="font-medium">{t(p.key)}</span>
+                {i < professions.length - 1 && (
+                  <span className="text-white/20">·</span>
+                )}
+              </span>
+            ))}
+          </div>
+
+          {/* CTAs */}
+          <div className="flex items-center justify-center gap-4">
+            <a
+              href="#work"
+              className="px-6 py-3 rounded-full bg-white text-black text-sm font-medium hover:bg-white/90 transition"
+            >
+              {t("cta.work")}
+            </a>
+            <a
+              href="#contact"
+              className="px-6 py-3 rounded-full border border-white/15 text-sm font-medium hover:bg-white/5 transition"
+            >
+              {t("cta.contact")}
+            </a>
+          </div>
+        </motion.div>
+
+        {/* Social icons — never mirrored */}
+        <div className="absolute bottom-28 flex items-center gap-5 text-white/50" style={{ direction: "ltr" }}>
+          <a href="#" aria-label="GitHub" className="hover:text-white transition"><Github size={18} /></a>
+          <a href="#" aria-label="LinkedIn" className="hover:text-white transition"><Linkedin size={18} /></a>
+          <a href="#" aria-label="Twitter" className="hover:text-white transition"><Twitter size={18} /></a>
+          <a href="#" aria-label="Dribbble" className="hover:text-white transition"><Dribbble size={18} /></a>
+        </div>
+
+        {/* Scroll indicator — elegant mouse with float + soft glow */}
+        <div
+          className="absolute bottom-10 flex flex-col items-center gap-2"
+          style={{ direction: "ltr" }}
+        >
+          <div className="scroll-float">
+            <div className="scroll-glow w-6 h-10 rounded-full border border-white/30 flex justify-center pt-2">
+              <span className="scroll-dot block w-1 h-1 rounded-full bg-white" />
+            </div>
+          </div>
+          <span className="text-[11px] uppercase tracking-[0.25em] text-white/40">
+            {t("hero.scroll")}
+          </span>
+          <ArrowDown size={12} className="text-white/30" />
+        </div>
+      </header>
+
+      {/* Placeholder sections so anchors resolve */}
+      <section id="about" className="min-h-screen" />
+      <section id="work" className="min-h-screen" />
+      <section id="contact" className="min-h-screen" />
     </div>
   );
 }
