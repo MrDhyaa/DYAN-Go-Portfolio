@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Twitter, Dribbble } from "lucide-react";
+import { Github, Linkedin, Twitter, Dribbble, PenTool, Code, Rocket } from "lucide-react";
 import { useI18n, Lang } from "./i18n";
 
 function LangSwitch() {
@@ -25,9 +25,9 @@ function LangSwitch() {
 }
 
 const professions = [
-  { key: "hero.profession1" },
-  { key: "hero.profession2" },
-  { key: "hero.profession3" },
+  { key: "hero.profession1", Icon: PenTool },
+  { key: "hero.profession2", Icon: Code },
+  { key: "hero.profession3", Icon: Rocket },
 ];
 
 export default function App() {
@@ -71,11 +71,14 @@ export default function App() {
             {t("hero.tagline")}
           </p>
 
-          {/* Profession items — order preserved, only text translated */}
-          <div className="flex items-center justify-center gap-3 text-sm text-white/70 mb-12">
+          {/* Profession items — icons + separators preserved, only text translates */}
+          <div className="flex items-center justify-center gap-4 text-sm text-white/70 mb-12">
             {professions.map((p, i) => (
-              <span key={p.key} className="flex items-center gap-3">
-                <span className="font-medium">{t(p.key)}</span>
+              <span key={p.key} className="flex items-center gap-4">
+                <span className="flex items-center gap-2">
+                  <p.Icon size={16} className="text-white/50" />
+                  <span className="font-medium">{t(p.key)}</span>
+                </span>
                 {i < professions.length - 1 && (
                   <span className="text-white/20">·</span>
                 )}
@@ -121,7 +124,6 @@ export default function App() {
           <span className="text-[11px] uppercase tracking-[0.25em] text-white/40">
             {t("hero.scroll")}
           </span>
-          <ArrowDown size={12} className="text-white/30" />
         </div>
       </header>
 
