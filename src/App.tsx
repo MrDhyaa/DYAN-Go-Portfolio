@@ -1,23 +1,24 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { Github, Linkedin, Twitter, Dribbble, PenTool, Code, Rocket } from "lucide-react";
-import { useI18n, Lang } from "./i18n";
+import { LANGS, type Lang } from "./i18n";
 
 function LangSwitch() {
-  const { lang, setLang } = useI18n();
-  const langs: Lang[] = ["en", "fr", "ar"];
+  const { i18n } = useTranslation();
+  const current = i18n.language as Lang;
   return (
     <div className="flex items-center gap-1 text-xs font-medium tracking-wide">
-      {langs.map((l, i) => (
+      {LANGS.map((l, i) => (
         <span key={l} className="flex items-center">
           <button
-            onClick={() => setLang(l)}
+            onClick={() => i18n.changeLanguage(l)}
             className={`uppercase transition-opacity ${
-              lang === l ? "opacity-100" : "opacity-40 hover:opacity-80"
+              current === l ? "opacity-100" : "opacity-40 hover:opacity-80"
             }`}
           >
             {l}
           </button>
-          {i < langs.length - 1 && <span className="mx-2 opacity-30">/</span>}
+          {i < LANGS.length - 1 && <span className="mx-2 opacity-30">/</span>}
         </span>
       ))}
     </div>
@@ -31,7 +32,7 @@ const professions = [
 ];
 
 export default function App() {
-  const { t } = useI18n();
+  const { t } = useTranslation();
 
   return (
     <div className="min-h-screen bg-[#0a0a0b] text-[#f5f5f7] overflow-x-hidden">
