@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "cv": "CV",
+    "beyondWork": "Au-delà du travail",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "hireMe": "Engagez-moi"
+  },
+  "hero": {
+    "name": "MrDYAN",
+    "roles": "Designer graphique · Développeur Web · Fondateur",
+    "bio": "Je crée des marques, des sites web et des expériences numériques pour des entreprises ambitieuses. Fondateur d'un studio créatif où le design rencontre l'ingénierie — un travail qui semble inévitable, premium et indéniablement vôtre.",
+    "cta": "Engagez-moi",
+    "ctaSecondary": "Voir le portfolio",
+    "ctaContact": "Contact"
+  },
+  "home": {
+    "featuredTitle": "Travaux sélectionnés, conçus pour être mémorisés",
+    "featuredEyebrow": "Portfolio",
+    "featuredDesc": "Un ensemble de projets soignés en branding, web et design produit.",
+    "servicesEyebrow": "Services",
+    "servicesTitle": "Tout ce dont votre marque a besoin, sous un même toit",
+    "servicesDesc": "Un studio créatif full-stack — du premier croquis au déploiement final.",
+    "viewAll": "Voir tout"
+  },
+  "about": {
+    "eyebrow": "À propos",
+    "title": "Combler l'écart entre l'idée et l'impact",
+    "desc": "Designer et développeur multidisciplinaire avec une décennie à transformer des marques émergentes en noms reconnus et fiables.",
+    "storyTitle": "Qui je suis",
+    "storyBody": "Je suis designer graphique, développeur web et fondateur d'une agence créative numérique. Depuis près de dix ans, je vis à l'intersection du design visuel et de l'ingénierie — traduisant l'ambition des marques en un travail à la fois beau et durable.",
+    "whatTitle": "Ce que je fais",
+    "whatBody": "Des systèmes de logo et d'identité aux sites React de qualité production, je pilote les projets de bout en bout. Stratégie, design, développement et lancement — une voix cohérente, un partenaire responsable.",
+    "whyTitle": "Pourquoi les clients me choisissent",
+    "whyBody": "Parce que le travail est livré. Parce qu'il performe. Et parce que chaque détail — de l'approche au Core Web Vitals — est traité comme une décision d'artisan, pas comme un détail.",
+    "mission": "Mission",
+    "missionText": "Aider les marques ambitieuses à paraître et performer comme les leaders de catégorie qu'elles méritent d'être.",
+    "vision": "Vision",
+    "visionText": "Un monde où chaque grande idée a un design et une ingénierie à sa hauteur — accessibles et premium.",
+    "values": "Valeurs",
+    "valuesText": "L'artisanat plutôt que le bruit. La clarté plutôt que le désordre. Des partenariats durables plutôt que des victoires rapides.",
+    "journeyTitle": "Mon parcours",
+    "journeyDesc": "Le chemin du designer au fondateur — chaque étape ajoutant une nouvelle discipline."
+  },
+  "cv": {
+    "eyebrow": "CV",
+    "title": "Expérience, formation et compétences",
+    "desc": "Une décennie d'artisanat, une étape à la fois.",
+    "experience": "Expérience",
+    "education": "Formation",
+    "skills": "Compétences",
+    "languages": "Langues",
+    "certificates": "Certificats",
+    "download": "Télécharger le CV"
+  },
+  "beyond": {
+    "eyebrow": "Au-delà du travail",
+    "title": "Ce qui alimente le travail",
+    "desc": "Loisirs, outils et rituels qui gardent le moteur créatif en marche.",
+    "hobbies": "Loisirs & intérêts",
+    "tools": "Outils préférés",
+    "workflow": "Routine quotidienne",
+    "inspiration": "Ce qui m'inspire",
+    "process": "Processus créatif",
+    "facts": "Anecdotes",
+    "goals": "Objectifs"
+  },
+  "portfolio": {
+    "eyebrow": "Portfolio",
+    "title": "Travaux sélectionnés, conçus pour être mémorisés",
+    "desc": "Un ensemble de projets soignés en branding, web et design produit.",
+    "visit": "Visiter le projet",
+    "caseStudy": "Étude de cas",
+    "back": "Retour au portfolio"
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "Tout ce dont votre marque a besoin, sous un même toit",
+    "desc": "Un studio créatif full-stack — du premier croquis au déploiement final."
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Construisons quelque chose de mémorable",
+    "desc": "Parlez-moi de votre marque, de vos objectifs et de votre calendrier. Je réponds sous un jour ouvrable.",
+    "name": "Votre nom",
+    "email": "Email",
+    "projectType": "Type de projet",
+    "message": "Message",
+    "send": "Envoyer le message",
+    "sent": "Message envoyé",
+    "namePlaceholder": "Jane Doe",
+    "emailPlaceholder": "jane@company.com",
+    "messagePlaceholder": "Parlez-moi de votre projet...",
+    "projectTypes": {
+      "branding": "Branding",
+      "web": "Développement Web",
+      "uiux": "Design UI/UX",
+      "marketing": "Design Marketing",
+      "other": "Autre"
+    },
+    "channels": {
+      "email": "Email",
+      "phone": "Téléphone",
+      "whatsapp": "WhatsApp",
+      "location": "Localisation"
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions, réponses",
+    "desc": "Tout ce qu'il faut savoir avant de collaborer."
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "madeWith": "Fait avec passion & précision.",
+    "backToTop": "Retour en haut"
+  },
+  "timeline": {
+    "title": "Mon parcours",
+    "desc": "Formation, expérience et étapes — chaque étape s'anime à l'entrée."
+  },
+  "language": {
+    "label": "Langue",
+    "en": "English",
+    "fr": "Français",
+    "ar": "العربية"
+  }
+}

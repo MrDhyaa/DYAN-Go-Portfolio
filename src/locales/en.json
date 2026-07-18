@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "cv": "CV",
+    "beyondWork": "Beyond Work",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "hireMe": "Hire Me"
+  },
+  "hero": {
+    "name": "Anouar Dia'a Eddine",
+    "roles": "Graphic Designer · Web Developer · Founder",
+    "bio": "I craft brands, websites, and digital experiences for ambitious companies. Founder of a creative studio where design meets engineering — building work that feels inevitable, premium, and unmistakably yours.",
+    "cta": "Hire Me",
+    "ctaSecondary": "View Portfolio",
+    "ctaContact": "Contact"
+  },
+  "home": {
+    "featuredTitle": "Selected work, built to be remembered",
+    "featuredEyebrow": "Portfolio",
+    "featuredDesc": "A curated set of projects across branding, web, and product design.",
+    "servicesEyebrow": "Services",
+    "servicesTitle": "Everything your brand needs, under one roof",
+    "servicesDesc": "A full-stack creative studio — from the first sketch to the final deploy.",
+    "viewAll": "View all"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Designing the gap between idea and impact",
+    "desc": "A multidisciplinary designer and developer with a decade of turning early-stage brands into recognizable, trusted names.",
+    "storyTitle": "Who I am",
+    "storyBody": "I am a graphic designer, web developer, and the founder of a digital creative agency. For nearly a decade I have lived at the intersection of visual design and engineering — translating brand ambition into work that is both beautiful and built to last.",
+    "whatTitle": "What I do",
+    "whatBody": "From logo and identity systems to production-grade React websites, I lead projects end-to-end. Strategy, design, development, and launch — one coherent voice, one accountable partner.",
+    "whyTitle": "Why clients choose me",
+    "whyBody": "Because the work ships. Because it performs. And because every detail — from kerning to Core Web Vitals — is treated as a craft decision, not an afterthought.",
+    "mission": "Mission",
+    "missionText": "To help ambitious brands look, feel, and perform like the category leaders they deserve to be.",
+    "vision": "Vision",
+    "visionText": "A world where every great idea has design and engineering worthy of it — accessible and premium.",
+    "values": "Values",
+    "valuesText": "Craft over noise. Clarity over clutter. Long-term partnerships over quick wins.",
+    "journeyTitle": "My Journey",
+    "journeyDesc": "The path from designer to founder — each step adding a new discipline."
+  },
+  "cv": {
+    "eyebrow": "CV",
+    "title": "Experience, education, and skills",
+    "desc": "A decade of craft, one step at a time.",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "languages": "Languages",
+    "certificates": "Certificates",
+    "download": "Download CV"
+  },
+  "beyond": {
+    "eyebrow": "Beyond Work",
+    "title": "What fuels the work",
+    "desc": "Hobbies, tools, and rituals that keep the creative engine running.",
+    "hobbies": "Hobbies & Interests",
+    "tools": "Favorite Tools",
+    "workflow": "Daily Workflow",
+    "inspiration": "What Inspires Me",
+    "process": "Creative Process",
+    "facts": "Fun Facts",
+    "goals": "Goals"
+  },
+  "portfolio": {
+    "eyebrow": "Portfolio",
+    "title": "Selected work, built to be remembered",
+    "desc": "A curated set of projects across branding, web, and product design.",
+    "visit": "Visit Project",
+    "caseStudy": "Case Study",
+    "back": "Back to portfolio"
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "Everything your brand needs, under one roof",
+    "desc": "A full-stack creative studio — from the first sketch to the final deploy."
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's build something worth remembering",
+    "desc": "Tell me about your brand, your goals, and your timeline. I reply within one business day.",
+    "name": "Your name",
+    "email": "Email",
+    "projectType": "Project type",
+    "message": "Message",
+    "send": "Send Message",
+    "sent": "Message sent",
+    "namePlaceholder": "Jane Doe",
+    "emailPlaceholder": "jane@company.com",
+    "messagePlaceholder": "Tell me about your project...",
+    "projectTypes": {
+      "branding": "Branding",
+      "web": "Web Development",
+      "uiux": "UI/UX Design",
+      "marketing": "Marketing Design",
+      "other": "Other"
+    },
+    "channels": {
+      "email": "Email",
+      "phone": "Phone",
+      "whatsapp": "WhatsApp",
+      "location": "Location"
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions, answered",
+    "desc": "Everything you need to know before we work together."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "madeWith": "Made with passion & precision.",
+    "backToTop": "Back to top"
+  },
+  "timeline": {
+    "title": "My Journey",
+    "desc": "Education, experience, and milestones — each step animated as it enters view."
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "fr": "Français",
+    "ar": "العربية"
+  }
+}
