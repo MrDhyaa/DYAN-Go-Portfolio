@@ -94,11 +94,11 @@ export default function Timeline() {
       </div>
 
       {/* track */}
-      <div className="absolute start-4 top-0 h-full w-px -ms-px bg-white/[0.08] sm:start-1/2 sm:-ms-px" />
+      <div className="absolute start-4 top-0 h-full w-px bg-white/[0.08] sm:start-1/2 sm:-translate-x-1/2" />
       {/* progress line */}
       <motion.div
         style={{ scaleY }}
-        className="absolute start-4 top-0 h-full w-px -ms-px origin-top bg-gradient-to-b from-electric-400 via-electric-500 to-cyan-400 sm:start-1/2 sm:-ms-px"
+        className="absolute start-4 top-0 h-full w-px origin-top bg-gradient-to-b from-electric-400 via-electric-500 to-cyan-400 sm:start-1/2 sm:-translate-x-1/2"
       />
 
       <div className="space-y-10">
@@ -112,7 +112,7 @@ export default function Timeline() {
                 }`}
               >
                 {/* node */}
-                <div className="absolute start-4 z-10 -ms-[7px] sm:start-1/2 sm:-ms-[7px]">
+                <div className="absolute start-4 z-10 -translate-x-1/2 sm:start-1/2">
                   <motion.span
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}

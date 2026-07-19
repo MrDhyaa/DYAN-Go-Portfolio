@@ -52,7 +52,7 @@ export default function Home() {
                         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/40 to-transparent" />
-                      <span className="absolute start-4 top-4 rounded-full border border-white/10 bg-ink-950/60 px-3 py-1 text-xs font-medium text-electric-300 backdrop-blur-md">
+                      <span className="absolute left-4 top-4 rounded-full border border-white/10 bg-ink-950/60 px-3 py-1 text-xs font-medium text-electric-300 backdrop-blur-md">
                         {p.category}
                       </span>
                     </div>
